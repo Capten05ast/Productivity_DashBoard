@@ -1,0 +1,850 @@
+
+
+/*
+Root variables
+> We are using :root, so that we can aceess basic colors anywhere in css
+  by renaming them with --pri, --sec etc.
+*/
+
+
+/*
+Satoshi font : 
+> We downloaded the satoshi font from fontshare.com
+> A zip file of satoshi font family got downloaded in chrome
+> We extracted it in wallpaper folder and copied and pasted the file
+  of satoshi regular font from walppaer folder to project folder
+> Finally we can use the font Satoshi-Regular.otf by changing its name to 
+  light in @font-face (default) section of css
+*/
+
+
+/*
+Color pallete :-
+In our website we need to stick to specific contrasting colors to give it
+some professional look, so we will chose a color pallete (group of 5-6 colors) 
+from color hunt website. And only those colors will be used in our website
+website 
+*/
+
+
+
+
+/* 
+CSS termology :-
+| Term                 | What it Means                                                                                                    |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `position: relative` | Anchor/reference point for absolutely positioned children inside it.                                             |
+| `position: absolute` | Take the element out of the normal flow and place it wherever you want based on the nearest **relative** parent. |
+| `display: none`      | Hides the element completely (like it's not in DOM visually).                                                    |
+| `display: block`     | Shows the element again.                                                                                         | 
+*/
+
+
+
+
+/* 
+"With whom is it absolute, and who is relative?"
+
+> #main is position: static (default), so all sections with 
+  position: absolute take #main as their reference.
+> If you set #main { position: relative; } explicitly, then it's clearer that:
+  .allElems and .fullElem will align inside #main, occupying the whole screen (height: 100%; width: 100%), but not disrupting the layout of each other. */
+
+
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--tri1);   /* your orange */
+  border-radius: 10px;
+}
+
+
+
+
+/*
+LANDING PAGE :-
+*/
+:root {
+    --pri:#faf0ba;
+    --sec:#381C0A;
+    --tri1:#ff850a;
+    --tri2:#74512D;
+    --red:#FF0000;
+    --green:rgb(6, 118, 75);
+    --blue:rgb(0, 191, 255);
+    --black:black;
+}
+
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(Satoshi-Regular.otf);
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: 200;
+    src: url(Satoshi-Light.otf);
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: 700;
+    src: url(Satoshi-Bold.otf);
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: var(--pri);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--sec);
+    /* overflow-y: hidden; */
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+}
+
+h1 {
+    font-weight: 200;
+    font-family: aeonik;
+    color:var(--pri);
+}
+
+.allElems {
+    padding: 15px;
+}
+
+section .allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    overflow: auto;
+
+}
+
+.allElems .allFeatures {
+    height: 100%;
+    width: 100%;
+    padding: 27.5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 31.5px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.allElems header {
+    padding: 20px;
+    height: 240px;
+    width: 100%;
+    background-color: var(--tri2);
+    border-radius: 15px;
+    margin-bottom: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    background-image: url(https://images.unsplash.com/photo-1717361279773-b2e7ee713d2e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;
+    background-position:center;
+}
+
+header .header1 {
+    color:var(--sec);
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+}
+header .header1 h1{
+    font-size: 56px;
+    color:var(--sec);
+    font-weight: 500;
+}
+
+header .header1 h2{
+    font-size: 40px;
+    color:var(--sec);
+    font-weight:500;
+}
+
+header .header1 h4{
+    margin-top: 20px;
+    font-size: 30px;
+    color:var(--pri);
+    font-weight: 500;
+    width:fit-content;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: rgba(98, 55, 11, 0.6);
+}
+
+header .header2 {
+    color: #381C0A;
+    background-color: rgba(255, 133, 10, 0.68); /* 0.5 = 50% visible */
+    padding: 7px 20px;
+    border-radius: 10px;
+    border: none;
+}
+header .header2 h2{
+    color:var(--sec);
+    font-size: 40px;
+}
+header .header2 h4{
+    color:var(--sec);
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+header .header2 h3{
+    color:var(--sec);
+    font-size: 18px;
+}
+
+.elem {
+    background-color: var(--tri1);
+    /* padding: 30px 40px; */
+    border-radius: 10px;
+    font-size: 23px;
+    height: 220px;
+    width:210px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(207, 205, 205, 0.429);
+
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2 {
+    position: absolute;
+    font-weight: 500;
+    font-size: 27px;
+    bottom: 4%;
+    right: 5%;
+}
+
+.elem:active{
+    scale: 0.85;
+}
+
+.fullElem {
+    height: 100%;
+    width: 100%;
+    background-color:var(--sec);
+    padding: 40px;
+    /* font-size: 35px; */
+    display: none;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+/*
+TODO LIST PAGE :-
+*/
+.back {
+
+/* 
+Button wasn't clickable because .motivation-wrapper had z-index:10 and 
+position:absolute, which placed it above the .back button.
+So, we raised the z-index of .back to 999 to ensure it's on top of 
+all stacked elements.
+*/
+
+    position: absolute;
+    right: 5%;
+    background-color: red;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    font-family: aeonik;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.back:active {
+    scale: 0.97;
+}
+
+/*
+.todo-list-fullpage {
+    background-color: red;
+    isplay: block; 
+
+    If you wil keep display block explicitly at starting then after
+    every reload the todolist page will appear 
+}
+*/
+
+.todo-list-fullpage h2 {
+    font-size: 40px;
+}
+
+.todo-list-fullpage .todo-container {
+    height: 80%;
+    width: 100%;
+    /* background-color: var(--tri2); */
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .addTask{
+    width: 33%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 18px;
+}
+
+.todo-list-fullpage .todo-container .allTask{
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.todo-list-fullpage .todo-container .addTask form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.todo-container .addTask form input#task-input{
+    padding: 9px 18px;
+    width: 100%;
+    font-size: 23px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.todo-container .addTask form textarea{
+    padding: 9px 18px;
+    width: 100%;
+    font-size: 21px;
+    background-color: var(--pri);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    color: var(--sec);
+    font-weight:500;
+}
+
+.todo-container .addTask form button{
+    padding: 9px 18px;
+    width: 100%;
+    font-size: 20px;
+    background-color: var(--tri1);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.todo-container .addTask form button:active{
+    scale: 0.96;
+
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+    gap: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 9px 25px;
+    border-radius: 9px;
+}
+
+.task h5 details summary{
+    color: var(--sec);
+    font-size: 21px;
+    display: felx;
+    align-items: center;
+    gap: 10px;
+}
+.task h5 details p{
+    color: var(--sec);
+    font-size: 15px;
+    display: felx;
+    align-items: center;
+    gap: 10px;
+}
+
+.task h5 span {
+    color: var(--pri);
+    font-size: 12px;
+    background-color: var(--red);
+    padding: 3px 5px;
+    border-radius: 50px;
+}
+
+.task h5 span.true {
+    opacity: 1;
+}
+.task h5 span.false {
+    opacity: 0;
+}
+
+.task button {
+    padding: 9px 20px;
+    color: var(--pri);
+    background-color: green;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    white-space: nowrap;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.task button:active {
+    scale: 0.85;
+
+}
+.task button:hover {
+    background-color: rgb(38, 169, 38);
+    /* scale: 1.05 */
+}
+
+.mark-imp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.mark-imp label {
+    font-size: 21px;
+}
+.mark-imp input{
+    scale: 2;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*
+DAILY PLANNER FULLPAGE :- 
+*/
+/* 
+.daily-planner-fullpage {
+    display: block;
+} 
+*/
+
+.daily-planner-fullpage h2{
+    font-size: 40px;
+}
+
+.daily-planner-fullpage .day-planner{
+    background-color: var(--tri2);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* border-radius: 40px; */
+    outline: none;
+    width: 49%;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+}
+
+.day-planner .day-planner-time input {
+    padding: 10px 35px;
+    width: 100%;
+    background-color: var(--sec);
+    border: none;
+    font-size: 20px;
+    padding-top: 35px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.day-planner .day-planner-time p {
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    color:var(--tri1);
+}
+
+
+
+
+
+
+
+
+
+/*
+MOTIVATION PAGE:-
+*/
+.motivational-fullpage {
+    /* display: block; */
+    position: relative;
+}
+
+.motivation-fullpage-container {
+    /* background-color: #FF0000; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.motivational-fullpage .motivation-container {
+    height: 420px;
+    width: 580px;
+    border-radius: 50px;
+
+    /* 
+    BY default every element has z-index of 10
+    thats why we gave .motivation-conatiner::after a z-index of 8
+    so that it glows the filter from its back 
+    */
+    z-index: 10; /* So this is optional */
+    position: relative;
+
+
+
+
+    /* 
+    keeping it in center STANDARD METHOD 
+    */
+    /* 
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); 
+    */
+}
+
+.motivational-fullpage .motivation-container::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:var(--tri1);
+    border-radius: 40px;
+    scale: 1.15;
+    filter: blur(120px);
+    z-index: 8;
+    
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper {
+ 
+    z-index: 10;
+    position:absolute;
+    /* height: 100%; */
+    width: 100%;
+    background-color:var(--tri1);
+    border-radius: 30px;
+    padding: 17px;
+    border:1px solid var(--sec);
+}
+
+
+
+/* 
+NOTE :-
+Z-index works fabulous in ::after 
+*/
+
+.motivation-1 {
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.motivation-1 h2 {
+    padding: 10px;
+    background-color:var(--tri2);
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: right;
+    width: fit-content;
+}
+.motivation-2 {
+    padding: 10px;
+    margin-top: 15px;
+}
+.motivation-2 h1{
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--sec);
+}
+
+
+.motivation-3 {
+    /* background-color: var(--tri2); */
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+.motivation-3 h1 {
+    padding: 10px;
+    background-color:var(--tri2);
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: right;
+    width: fit-content;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper img {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    scale: 0.83;
+    opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+/*
+POMODORO TIMER :-
+*/
+.pomodoro-fullpage {
+    /* display: block; */
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1515824955341-43172b4d8260?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+    background-size: cover;
+}
+
+.pomodoro-fullpage h2 {
+    font-size: 40px;
+}
+
+.pomodoro-fullpage .pomo-timer {
+
+    /* STANDARD METHOD TO PLACE ELEMENT IN CENTER */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+
+.pomo-timer h1 {
+    font-size: 120px;
+}
+
+.pomo-timer button {
+    background-color: rgb(81, 11, 11);
+    padding: 12px 35px;
+    font-size: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+
+    box-shadow: 4px 4px 0px var(--pri);
+    transition: all ease 0.2s;
+    /* The 0px position is for blurness */
+}
+
+.pomo-timer button:active {
+    background-color: var(--tri2);
+    padding: 12px 35px;
+    font-size: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+
+    scale: 0.90;
+
+    box-shadow: 0px 0px 0px var(--pri);
+    /* The 0px position is for blurness */
+}
+
+.pomodoro-fullpage .session {
+    position: absolute;
+    top:18%;
+    left:50%;
+
+    /* coz we need to center it only on x axis */
+    transform: translate(-50%);
+    background-color: rgb(2, 151, 2);
+    padding: 11px 30px;
+    font-size: 30px;
+
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/*
+THEME :-
+*/
+
+nav {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+
+.nav-in {
+    display: flex;
+    background-color: var(--tri2);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+nav h2 {
+    font-size: 18px;
+}
+.theme {
+    background-color: var(--pri);
+    color: var(--sec);
+    padding: 4px;
+    border-radius: 45%;
+    cursor: pointer;
+}
+
+.theme i{
+    color: var(--sec);
+    font-size: 18px;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+/* 
+CUSTOM CURSOR :-
+*/
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--pri);
+  border-radius: 50%;
+  pointer-events: none; /* So it doesn't block clicks */
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s, left 0.05s;
+}
+

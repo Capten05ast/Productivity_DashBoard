@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="" href="favicon-32x32.png">
+</head>
+<body>
+    
+    <div id="main">
+        <section class="allElems">
+            <nav>
+                <div class="nav-in">
+                    <h2> Productivity DashBoard </h2>
+                    <div class="theme">
+                        <i class="ri-sun-line"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <header>
+                <div class="header1">
+                    <h2> 20 April 2025 </h2>
+                    <h1> Saturday, 1:00 </h1>
+                    <h4> Pune, Maharashtra </h4>
+                </div>
+
+                <div class="header2">
+                    <h2> 20°C </h2>
+                    <h4> Light rain </h4>
+
+                    <h3 class="precipitation"> Precipitation : 35% </h3>
+                    <h3 class="humidity"> Humidity : 49% </h3>
+                    <h3 class="wind"> Wind : 10 km/h </h3>
+                </div>
+            </header>
+
+            <div class="allFeatures">
+
+                <div class="todo elem" id="0">
+                    <img src="https://images.unsplash.com/photo-1633427370898-c40eceefb26c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>To Do List</h2>
+                </div>
+
+                <div class="daily elem" id="1">
+                    <img src="https://images.unsplash.com/photo-1635656731280-293c96c2ebb8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Daily Planner</h2>
+                </div>
+
+                <div class="moti elem" id="2">
+                    <img src="https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Motivation</h2>
+                </div>
+
+                <div class="pomo elem" id="3">
+                    <img src="https://images.unsplash.com/photo-1635399860495-2a2802a6df5e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Pomodoro Timer</h2>
+                </div>
+
+                <div class="goals elem" id="4">
+                    <img src="https://images.unsplash.com/photo-1735485412790-83bd9f293313?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Daily Goals</h2>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <section class="fullElem todo-list-fullpage">
+            <button class="back back-1" id="0"> Close</button>
+            <!-- <i class="ri-close-large-line"></i> -->
+            <h2>Your Personalised Task List</h2>
+
+
+            <div class="todo-container">
+                <div class="addTask">
+                    <form action="">
+                        <input id="task-input" type="text" placeholder="Enter Task">
+                        <textarea placeholder="Enter Details" name="" rows="5" id=""></textarea>
+                        
+                        <div class="mark-imp">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox"> Mark as Important! </label>
+                        </div>
+                        <button>Add Task</button>
+                    </form>
+                </div>
+
+
+                <div class="allTask">
+
+                </div>
+            </div>
+
+            <!-- <details>
+                <summary>Click to expand</summary>
+                <p>This is the hidden content. It shows up when you click above.</p>
+            </details> -->
+        </section>
+
+
+
+
+        <section class="fullElem daily-planner-fullpage">
+            <button class="back back-2" id="1"> Close</button>
+            <!-- <i class="ri-close-large-line"></i> -->
+            <h2>Plan a Day to be more Productive</h2>
+
+            <div class="day-planner">
+
+            </div>
+        </section>
+
+
+
+
+        <section class="fullElem motivational-fullpage">
+            <!-- <i class="ri-close-large-line"></i> -->
+            <button class="back back-3" id="2"> Close </button>
+
+            <div class="motivation-fullpage-container">
+                <div class="motivation-container">
+                    <div class="motivation-wrapper">
+                        <img src="icons8-quotes-100.png" alt="">
+                        <div class="motivation-1">
+                            <h2>Quote of the Day</h2>
+                        </div>
+                        <div class="motivation-2">
+                            <h1></h1>
+                        </div>
+                        <div class="motivation-3">
+                            <h1></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="fullElem pomodoro-fullpage">
+            <button class="back back-4" id="3"> Close</button>
+            <!-- <i class="ri-close-large-line"></i> -->
+            <h2>Study with me!</h2>
+
+            <h4 class="session">
+                Work Session
+            </h4>
+            <div class="pomo-timer">
+                <h1>25:00</h1>
+                <button class="Start-timer">
+                    Start
+                </button>
+                <button class="Pause-timer">
+                    Pause
+                </button>
+                <button class="Reset-timer">
+                    Reset
+                </button>
+            </div>
+        </section>
+
+
+
+
+        <section class="fullElem daily-goals-fullpage">
+            <button class="back back-5" id="4"> Close</button>
+            <!-- <i class="ri-close-large-line"></i> -->
+            <h2>Daily Goals</h2>
+        </section>
+
+    </div>
+
+    <div class="custom-cursor"></div>
+    <script src="DOMify.js"></script>
+</body>
+</html>
+
